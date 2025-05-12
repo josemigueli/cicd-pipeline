@@ -25,7 +25,7 @@ jobs:
       - name: Build the user interface
         run: npm run build:ui
       - name: e2e tests
-        uses: cypress-io/github-action@0ee1130f05f69098ab5c560bd198fecf5a14d75b
+        uses: cypress-io/github-action@v5
         with:
           command: npm run test:e2e
           start: npm run test-mode
