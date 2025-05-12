@@ -1,7 +1,7 @@
 const DeleteButton = ({ deleteTrigger }) => {
     return (
         <>
-        <button type='button' onClick={deleteTrigger}>Delete</button>
+        <button className='delete-button' type='button' onClick={deleteTrigger}>Delete</button>
         </>
     )
 }

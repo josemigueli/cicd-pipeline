@@ -3,13 +3,13 @@ const PersonForm = ({ addNewRegister, updateValue, name, number }) => {
         <>
         <form onSubmit={addNewRegister}>
             <div>
-                name: <input value={name} name='name' onChange={updateValue} />
+                name: <input id='name' value={name} name='name' onChange={updateValue} />
             </div>
             <div>
-                number: <input value={number} name='number' onChange={updateValue} />
+                number: <input id='number' value={number} name='number' onChange={updateValue} />
             </div>
             <div>
-                <button type='submit'>Add</button>
+                <button id='add-number' type='submit'>Add</button>
             </div>
         </form>
         </>

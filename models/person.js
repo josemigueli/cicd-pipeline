@@ -3,7 +3,14 @@ const config = require('../lib/config')
 
 mongoose.set('strictQuery', false)
 
-const url = config.mongoUrl
+let url
+console.log('NODE_ENV:', config.nodeEnv)
+
+if (config.nodeEnv === 'test') {
+  url = config.testMongoUrl
+} else {
+  url = config.mongoUrl
+}
 
 console.log('Connecting to MongoDb...')
 
