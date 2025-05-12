@@ -12,6 +12,7 @@ jobs:
   deployment:
     runs-on: ubuntu-latest
     env:
+      MONGODB_URI: ${{ secrets.MONGODB_URI }}
       TEST_MONGODB_URI: ${{ secrets.TEST_MONGODB_URI }}
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
@@ -25,7 +26,7 @@ jobs:
       - name: Build the user interface
         run: npm run build:ui
       - name: e2e tests
-        uses: cypress-io/github-action@v5
+        uses: cypress-io/github-action@0ee1130f05f69098ab5c560bd198fecf5a14d75b
         with:
           command: npm run test:e2e
           start: npm run test-mode
