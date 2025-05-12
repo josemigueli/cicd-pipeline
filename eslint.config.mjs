@@ -4,7 +4,7 @@ import { defineConfig, globalIgnores } from 'eslint/config'
 import eslintPluginPrettier from 'eslint-plugin-prettier/recommended'
 
 export default defineConfig([
-  globalIgnores(['node_modules/*', 'dist/*', 'frontend/*']),
+  globalIgnores(['node_modules/*', 'dist/*', 'frontend/*', 'e2e-tests/*']),
   {
     files: ['**/*.{js,mjs,cjs}'],
     plugins: { js },
