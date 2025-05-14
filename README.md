@@ -1,6 +1,6 @@
 # Phonebook Backend
 
-This is the backend for the **Part 3** of the **Full Stack Open Course** offered by the University of Helsinki. It is built using **Node.js** and **Express**, and it serves as the backend for a phonebook application. The frontend, developed with **React**, is included in the `dist` folder and allows users to view, add, filter, and delete phonebook entries.
+This is the backend for the **11.20 - 11.21 exercises** of the **Full Stack Open Course** offered by the University of Helsinki. It is built using **Node.js** and **Express**, and it serves as the backend for a phonebook application. The frontend, developed with **React**, is included in the `frontend` folder and allows users to view, add, filter, and delete phonebook entries.
 
 A live version of the project is deployed on **Fly.io**.
 
@@ -8,7 +8,7 @@ A live version of the project is deployed on **Fly.io**.
 
 - **RESTful API**: The backend provides a RESTful API to manage phonebook entries.
 - **MongoDB Integration**: The application uses MongoDB to store and retrieve phonebook data.
-- **Frontend Integration**: The frontend, developed in **Part 2** of the course, is served from the `dist` folder.
+- **Frontend Integration**: The frontend, developed in **Part 2** of the course, is served from the `dist` folder and the source code is in `frontend` folder.
 - **Error Handling**: Custom error handling for malformed IDs and validation errors.
 - **Logging**: HTTP request logging using `morgan`.
 
@@ -27,8 +27,8 @@ A live version of the project is deployed on **Fly.io**.
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/josemigueli/fso-part3.git
-   cd fso-part3
+   git clone https://github.com/josemigueli/cicd-pipeline.git
+   cd cicd-pipeline
    ```
 
 2. **Install dependencies**:
@@ -43,6 +43,7 @@ A live version of the project is deployed on **Fly.io**.
    - Add the following variables:
      ```env
      MONGODB_URI=your_mongodb_uri
+     TEST_MONGODB_URI=your_test_mongodb_uri
      PORT=your_port
      ```
 
@@ -60,6 +61,8 @@ A live version of the project is deployed on **Fly.io**.
 
 - **`start`**: Starts the server in production mode.
 - **`dev`**: Starts the server in development mode using `nodemon`.
+- **`test-mode`**: Starts the server to run the e2e tests.
+- **`test:e2e`**: Comman to run the e2e tests in Github Actions.
 - **`build:ui`**: Builds the frontend and copies it to the `dist` folder.
 - **`deploy`**: Deploys the application to Fly.io.
 - **`deploy:full`**: Builds the frontend and deploys the application to Fly.io.
@@ -108,7 +111,7 @@ For more info visit the official [docs](https://fly.io/docs/flyctl/install/).
 
 ## Live Demo
 
-A live version of the application is available at [https://fso-part3-gt.fly.dev/](https://fso-part3-gt.fly.dev/).
+A live version of the application is available at [https://cicd-pipeline.fly.dev/](https://cicd-pipeline.fly.dev/).
 
 ## License
 

@@ -106,7 +106,7 @@ app.put('/api/persons/:id', (request, response, next) => {
 })
 
 app.get('/api/version', (_request, response) => {
-  response.send('0.0.1')
+  response.send('Version 1.0.0')
 })
 
 const unknownEndPoint = (_request, response) => {
@@ -130,7 +130,11 @@ const errorHandler = (error, _request, response, next) => {
 app.use(unknownEndPoint)
 app.use(errorHandler)
 
-const PORT = config.port
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`)
-})
+try {
+  const PORT = config.port
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`)
+  })
+} catch (err) {
+  console.error('Failed to start the server:', err)
+}
